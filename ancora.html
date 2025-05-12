@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>ANCORA - Date bancare</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Datele bancare ale organizației creștine Ancora" />
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v3.0.1/modern-normalize.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJMYXllcl8yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjQuNjQgMTcyLjg1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzAyMDIwMjt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IkxheWVyXzEtMiI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNi45Niw5Ny4zMmMxLjc5LDIwLjU5LDEyLjU3LDQwLDI4LjgyLDUyLjYsMjYuNTQsMjAuNTcsNjMuMTgsMjEuMzEsOTAuNTMsMS43OCwxNy40Ny0xMi40OCwyOS41Mi0zMi44MywzMS4xMi01NC4zOGg3LjJjLTEuMzQsMTQuMTgtNi4xMywyNy45My0xNC4yLDM5LjYzLTE5LjMsMjcuOTktNTMuMzUsNDEuMzgtODYuNzksMzMuODFDMjkuMjEsMTYyLjk2LDIuNTQsMTMyLjY1LDAsOTcuMzJoNi45NloiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik03OC45NiwyMi4yOHYxMzYuOWMtMzEuMjYtMS4xOC01OC44NC0yNC4zOS02NS4yOC01NC45aDcuMmM1Ljc0LDIzLjk4LDI2LjUyLDQzLjU4LDUxLjEyLDQ2Ljk5VjM5LjA2bC0xMy4yLDEyLjcxdi05LjcxbDE5LjQ0LTE5LjQyLjcyLS4zNloiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMDUuNiw1MS43N2wtMTIuOTYtMTIuNzF2MTEyLjJjMjQuNDktMy41OSw0NS4zMy0yMi45NCw1MC44OC00Ni45OWg3LjJjLTYuMTksMzAuNDgtMzMuOTQsNTMuNjUtNjUuMDQsNTQuOVYyMi4yOGwxOS45MiwxOS43OHY5LjcxWiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIxMDUuNiAzMi44MyA4Mi4yIDEwLjA0IDU4LjggMzIuODMgNTguOCAyMy4zNiA4Mi4yMyAwIDgyLjgxIC4zMyAxMDUuNiAyMy4zNiAxMDUuNiAzMi44MyIvPjwvZz48L3N2Zz4=">
+
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            box-sizing: border-box;
+            background-color: #ecf0f1;
+            overflow-x: hidden;
+        }
+
+        section {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 5rem;
+            font-weight: 800;
+            color: #2d3436;
+        }
+
+        h1 span {
+            display: block;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+
+        #p2 {
+            font-weight: normal;
+        }
+
+        .container {
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 0 auto;
+            max-width: 1500px;
+        }
+        
+        #logo {
+            width:100px !important;
+            height:100px !important;
+            min-height: 100px !important;
+            max-height: 100px !important;
+            min-width: 100px !important;
+            max-width: 100px !important;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .ray {
+            z-index: 1;
+            position: fixed;
+            top:0;
+            right:0;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            width: 100%;
+            height: 100%;
+            background-image: url("https://www.pngall.com/wp-content/uploads/7/Rays-PNG-Free-Download.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            animation: fadeIn 1.75s;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            justify-content: space-around;
+        }
+
+        .flex-item {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            background-color: green;
+        }
+
+        .spacer {
+            min-height:50px !important;
+        }
+
+        section .container {
+            margin: auto;
+            padding: 2em;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            h1 span {
+                display: inline;
+            }
+        }
+
+        .button {
+            text-transform: uppercase;
+        }
+
+        .btn1 {
+            background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+            border-radius: 7px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+            font-weight: 800;
+            height: 4rem;
+            padding: 0 1.6rem;
+            text-align: center;
+            transition: all .7s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .btn2 {
+            background: transparent;
+            border-radius: 7px;
+            border: 2px solid #455EB5;
+            box-sizing: border-box;
+            color: #5643CC;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-shadow: 0.3px 0.3px #5643CC;
+            height: 4rem;
+            padding: 0 1.6rem;
+            text-align: center;
+            transition: all .7s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button:active,
+        .button:hover {
+            box-shadow: rgba(80, 63, 205, 0.3) 0 1px 30px;
+            transition-duration: .1s;
+        }
+
+    @media (min-width: 1000px) {
+        .button {
+            padding: 0 2.6rem;
+        }
+    }
+
+    #buttons {
+        display:flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    #details {
+        display:flex;
+        flex-direction: column;
+        font-size: 1.35rem;
+        font-weight: bold;
+        gap:5px;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 3rem;
+        }
+
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+        }
+
+        .ray {
+            display:none;
+        }
+    }
+
+    #copyMsg {
+        position: fixed;
+        inset: 0;
+        display:none;
+        width:100vw !important;
+        height:100vh !important;
+        z-index:7;
+    }
+
+    #copyMsg > div {
+        width:100vw;
+        height:100vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color: skyblue;
+        font-size:7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: rgba(255,255,255,0.95);
+        padding: 1em 1.5em;
+        /*border-radius: 0.5rem;*/
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+<section id="main">
+    <div class="ray"></div>
+    <div class="container">
+        <div class="logo">
+            <a href="https://www.facebook.com/ancoraiasi/" >
+            <img id="logo" height="100" width="100" alt="Logo ANCORA" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJMYXllcl8yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMzQuMjQgMjI4LjA4Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzAxMDEwMTt9LmNscy0ye2ZpbGw6IzgzODM4Mzt9LmNscy0ze2ZpbGw6IzdkN2Q3ZDt9LmNscy00e2ZpbGw6IzAyMDIwMjt9LmNscy01e2ZpbGw6IzAzMDMwMzt9LmNscy02e2ZpbGw6IzdmN2Y3Zjt9LmNscy03e2ZpbGw6IzA0MDQwNDt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IkxheWVyXzEtMiI+PHBvbHlnb24gY2xhc3M9ImNscy03IiBwb2ludHM9IjQyLjcyIDIyOCA0Mi43MiAxOTUuMzkgNDQuNzYgMTk1LjQgNjUuMjggMjE1LjUzIDY1LjI4IDE5NS4zOSA3MiAxOTUuMzkgNzIgMjI4IDY5LjM2IDIyOCA0OS40NCAyMDguMSA0OS40NCAyMjggNDIuNzIgMjI4Ii8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMTM4Ljk2LDIyOGMtLjk4LjA5LTIuODcuMTEtMy44NCwwLTE5LjY3LTIuMTktMTkuMTctMzQuMTQsMy45Ny0zMi42MiwxOC45OSwxLjI1LDE5LjU5LDMwLjczLS4xMywzMi42MlpNMTM2Ljc2LDIwMS40NWMtMTIuOC41OC0xMS45NSwyMS4zMSwxLjM2LDIwLjMxLDEyLjM4LS45MywxMS42Mi0yMC44OS0xLjM2LTIwLjMxWiIvPjxwYXRoIGNsYXNzPSJjbHMtNSIgZD0iTTEwMC44LDIyOGMtLjk0LjA4LTIuNjguMS0zLjYsMC0xMS42LTEuMzEtMTcuOTQtMTQuMzQtMTIuMzYtMjQuNDYsNC44My04Ljc2LDE2LjYzLTEwLjc0LDI0LjY4LTUuMjMuNDguMzMsMS43OCwxLjA4LDEuNSwxLjYzbC00LjExLDQuNTVjLTcuNTYtNS42MS0xOC40Ni0xLjk0LTE3LjM1LDguNDkuNzYsNy4xNSw3Ljk0LDkuODQsMTQuMiw3LjUzLDEuMTctLjQzLDIuMDEtMS4zLDMuMTMtMS42bDQuMjMsNC42MmMtLjA5LjUyLTMuMzEsMi40NS0zLjk4LDIuNzYtMS43MS44LTQuNDcsMS41NS02LjMzLDEuNzFaIi8+PHBhdGggY2xhc3M9ImNscy02IiBkPSJNMjM0LjI0LDIyNy41MnYuNDhoLTcuNDR2LS4yNGMyLjM1LS4xNSw0Ljk2LjMxLDcuMi0uMjRoLjI0WiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIuMjQgMjI3LjI4IC4zOSAyMjcuNzcgNi45NiAyMjcuNzYgNi45NiAyMjggMCAyMjggMCAyMjcuMjggLjI0IDIyNy4yOCIvPjxyZWN0IGNsYXNzPSJjbHMtNiIgeD0iMTgzLjg0IiB5PSIyMjcuNzYiIHdpZHRoPSI3LjQ0IiBoZWlnaHQ9Ii4yNCIvPjxyZWN0IGNsYXNzPSJjbHMtNiIgeD0iMjUuNjgiIHk9IjIyNy43NiIgd2lkdGg9IjcuMiIgaGVpZ2h0PSIuMjQiLz48cmVjdCBjbGFzcz0iY2xzLTIiIHg9IjIwMS4zNiIgeT0iMjI3Ljc2IiB3aWR0aD0iNi45NiIgaGVpZ2h0PSIuMjQiLz48cmVjdCBjbGFzcz0iY2xzLTYiIHg9IjE2My42OCIgeT0iMjI3Ljc2IiB3aWR0aD0iNi40OCIgaGVpZ2h0PSIuMjQiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik00MS43Niw5Ny44MmMxLjc5LDIwLjU5LDEyLjU3LDQwLDI4LjgyLDUyLjYsMjYuNTQsMjAuNTcsNjMuMTgsMjEuMzEsOTAuNTMsMS43OCwxNy40Ny0xMi40OCwyOS41Mi0zMi44MywzMS4xMi01NC4zOGg3LjJjLTEuMzQsMTQuMTgtNi4xMywyNy45My0xNC4yLDM5LjYzLTE5LjMsMjcuOTktNTMuMzUsNDEuMzgtODYuNzksMzMuODEtMzQuNDMtNy44LTYxLjEtMzguMTEtNjMuNjQtNzMuNDRoNi45NloiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik0xMTMuNzYsMjIuNzh2MTM2LjljLTMxLjI2LTEuMTgtNTguODQtMjQuMzktNjUuMjgtNTQuOWg3LjJjNS43NCwyMy45OCwyNi41Miw0My41OCw1MS4xMiw0Ni45OVYzOS41NmwtMTMuMiwxMi43MXYtOS43MWwxOS40NC0xOS40Mi43Mi0uMzZaIi8+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNMTQwLjQsNTIuMjZsLTEyLjk2LTEyLjcxdjExMi4yYzI0LjQ5LTMuNTksNDUuMzMtMjIuOTQsNTAuODgtNDYuOTloNy4yYy02LjE5LDMwLjQ4LTMzLjk0LDUzLjY1LTY1LjA0LDU0LjlWMjIuNzhsMTkuOTIsMTkuNzh2OS43MVoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xNjMuNjgsMjI3Ljc2di0zMi4zN2gxNy40Yy42LDAsMi45OS44NCwzLjY0LDEuMTUsNi44MSwzLjIzLDYuMTIsMTUuMTYtMS4zNiwxNy4xOGw3LjkyLDE0LjAzaC03LjQ0bC03LjY4LTEzLjQzaC01LjY0Yy0uMzQuMjEtLjMzLjQ4LS4zNy44My0uNDUsMy44Ny4zNiw4LjYzLjAxLDEyLjZoLTYuNDhaTTE3MC4xNiwyMDguMzRoMTAuMmMuMDksMCwxLjI0LS40MiwxLjQxLS41MSwyLjI1LTEuMjgsMi4xMi01LS40LTYuMDItLjE5LS4wOC0xLjQxLS40My0xLjQ5LS40M2gtOS43MnY2Ljk1WiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNCIgcG9pbnRzPSIxNDAuNCAzMy4zMiAxMTcgMTAuNTQgOTMuNiAzMy4zMiA5My42IDIzLjg1IDExNy4wMyAuNSAxMTcuNjEgLjgzIDE0MC40IDIzLjg1IDE0MC40IDMzLjMyIi8+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNLjI0LDIyNy4yOGwxMi42LTMxLjY1LDYuOTctLjI2LjM4LjE2LDEyLjY5LDMyLjIyaC03LjJjLTMuMjgtNy43MS01Ljg5LTE1Ljc5LTkuMjQtMjMuNWwtOS40OCwyMy41SC4zOXMtLjE1LS40OC0uMTUtLjQ4WiIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTIwMS4zNiwyMjcuNzZsMTIuNjktMzIuMjIsNy4xOS0uMSwxMi43NiwzMi4wOWMtMi4yNC41NS00Ljg1LjA5LTcuMi4yNC0zLjI5LTcuMjgtNS4zNy0xNS41OS04Ljc3LTIyLjc3LS4xMy0uMjguMDQtLjU5LS40Ni0uNDhsLTkuMjQsMjMuMjZoLTYuOTZaIi8+PC9nPjwvc3ZnPg==">
+            </a>
+        </div>
+        <div class="row">
+            <span class="spacer"></span>
+        </div>
+        <div class="row">
+            <h1><span>Datele bancare ale</span> <span>organizației creștine Ancora ⚓🕊️</span></h1>
+        </div>
+        <div class="row">
+            <span class="spacer"></span>
+        </div>
+        <div class="row">
+            <p id="p1">Îți mulțumim că iei în considerare să faci o donație sau să cotizezi cu zeciuiala lunară la buna funcționare a bisericii noastre, funcționare care este posibilă doar prin cotizațiile lunare ale membrilor bisericii. 🙏</p>
+            <span class="spacer"></span>
+            <p id="p2">Aici poți găsi și copia mai ușor datele contului nostru bancar:</p>
+            <div id="details">
+                <span id="nume">ASOCIAȚIA CENTRUL CREȘTIN ANCORA</span>
+                <span id="iban">RO57BTRLEURCRT0CX2665701</span>
+            </div>
+            <span class="spacer"></span>
+            <div id="buttons">
+                <button class="button btn1" id="btn-iban" role="button" data-clipboard-text="RO57BTRLEURCRT0CX2665701">Copiază IBAN-ul</button>
+                <button class="button btn2" id="btn-nume" role="button" data-clipboard-text="ASOCIAȚIA CENTRUL CREȘTIN ANCORA">Copiază numele contului</button>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="copyMsg"><div><span>✔️</span></div></div>
+<script>
+    var clipboard = new ClipboardJS('.button');
+
+    clipboard.on('success', function(e) {
+        $('#copyMsg').fadeIn(500).delay(1500).fadeOut(500);
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+</script>
+</body>
+</html>
+
+
