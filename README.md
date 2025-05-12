@@ -241,13 +241,13 @@
             <span class="spacer"></span>
         </div>
         <div class="row">
-            <h1><span>Datele bancare ale</span> <span>organizației creștine Ancora ⚓🕊️</span></h1>
+            <h1><span>Datele bancare ale</span> <span>organizației creștine Ancora</span></h1>
         </div>
         <div class="row">
             <span class="spacer"></span>
         </div>
         <div class="row">
-            <p id="p1">Îți mulțumim că iei în considerare să faci o donație sau să cotizezi cu zeciuiala lunară la buna funcționare a bisericii noastre, funcționare care este posibilă doar prin cotizațiile lunare ale membrilor bisericii. 🙏</p>
+            <p id="p1">Îți mulțumim că iei în considerare să faci o donație sau să cotizezi cu zeciuiala lunară la buna funcționare a bisericii noastre, funcționare care este posibilă doar prin cotizațiile lunare ale membrilor bisericii.</p>
             <span class="spacer"></span>
             <p id="p2">Aici poți găsi și copia mai ușor datele contului nostru bancar:</p>
             <div id="details">
